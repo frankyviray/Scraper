@@ -1,0 +1,24 @@
+<h1>Saved Articles</h1>
+
+<div>
+  <a href="/">Home</a>
+</div>
+
+<div id="articles">
+  <ul>
+    {{#each array}}
+      {{#if saved}}
+        <li class= "articles">
+          {{title}}
+        </br>
+          {{link}}
+        </br>
+        <button class="comment" data-id={{_id}} type="button" name="button">Comment</button>
+      {{/if}}
+    {{/each}}
+  </ul>
+</div>
+
+<div id="comments">
+
+</div>

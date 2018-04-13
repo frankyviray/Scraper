@@ -1,0 +1,27 @@
+<h1>Reddit Scrapening</h1>
+<div>
+  <a id="scrape" href="/scrape">Scrapening</a>
+  <a href="/saved">Saved Articles</a>
+</div>
+
+<div id="articles">
+  <ul>
+    {{#each array}}
+      <li class= "articles">
+        {{title}}
+      </br>
+        {{link}}
+      </br>
+      <button class="comment" data-id={{_id}} type="button" name="button">Comment</button>
+      {{#unless saved}}
+        <button class="save" data-id={{_id}}  data-saved={{saved}} type="button" name="button">Save Article</button>
+      </li>
+      {{/unless}}
+    {{/each}}
+  </ul>
+</div>
+
+
+<div id="comments">
+
+</div>
